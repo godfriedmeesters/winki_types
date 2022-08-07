@@ -14,8 +14,12 @@ class Product
     nutriscore;
     url;
     timeRetrieved = new Date();
+    discountDescription;
+    isDiscounted;
+    priceBeforeDiscount;
 
-    constructor(shop, localProductId, eanCodes, name, price, unit, contents, description, categories, brand, image, url, nutriscore = '') {
+    constructor(shop, localProductId, eanCodes, name, price, unit, contents, description, categories, brand, image, url, nutriscore = '', discountDescription = '',
+                isDiscounted = false, priceBeforeDiscount) {
         this.shop = shop;
         this.localProductId = localProductId;
         this.eanCodes = eanCodes;
@@ -28,7 +32,10 @@ class Product
         this.brand = brand;
         this.image = image;
         this.nutriscore = nutriscore;
-        this.url = url; 
+        this.url = url;
+        this.discountDescription = discountDescription;
+        this.isDiscounted = isDiscounted;
+        this.priceBeforeDiscount = priceBeforeDiscount;
       }
 }
 
